@@ -1,13 +1,18 @@
-How to run experiments:
+
+### About the project
+
+Please see blog post for details: https://blog.asjadk.com/deepprocess/
+
+### How to run experiments:
 1. Data for each experiment can be found on ./data/BusinessProcess folder
 2. File presuf_run.py contains code for 3 experiments
 3. In presuf_run.py: there are train and test funtions for each task. Just call the appropriate one
 
-How to tune hyper parameters:
+### How to tune hyper parameters:
 1. In each function, hyper parameters are hard-coded
 2. Just edit directly
 
-Type of hyper parameters: 
+#### Type of hyper parameters: 
 1. Method type (edit in constructer's arguments):
 - LSTM seq2seq:  use_mem=False
 - DNC: use_mem=True, decoder_mode=True/False, dual_controller=False, write_protect=False
@@ -27,7 +32,7 @@ Type of hyper parameters:
 - lm_train=True/False: training by the language model's way (edit in prepare_sample_batch function)
 - optimizer: in file dnc.py, function build_loss_function_mask (default is adam)
 
-Notes:
+#### Notes:
 1. The current hyper-parameters are picked by experience from other projects
 2. Except from different method types, I have not tried with other hyper-parameters
 
